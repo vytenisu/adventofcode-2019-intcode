@@ -1,0 +1,36 @@
+{
+  "name": "adventofcode-2019-intcode",
+  "version": "13.0.0",
+  "description": "Intcode machine defined in adventofcode 2019",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Sry :)\""
+  },
+  "homepage": "https://github.com/vytenisu/adventofcode-2019-intcode",
+  "bugs": {
+    "url": "https://github.com/vytenisu/adventofcode-2019-intcode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vytenisu/adventofcode-2019-intcode.git"
+  },
+  "keywords": [
+    "advent",
+    "adventofcode",
+    "2019",
+    "package",
+    "intcode",
+    "vytenis",
+    "urbonavicius",
+    "vytenisu",
+    "WhiteTurbine",
+    "Whitend"
+  ],
+  "author": {
+    "name": "Vytenis Urbonavičius",
+    "url": "https://github.com/vytenisu"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
