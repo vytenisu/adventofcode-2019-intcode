@@ -11,6 +11,15 @@ module.exports = {
     UNEXPECTED: 2,
   },
 
+  parseProgram(rawProgram) {
+    let softIndex = 0
+
+    return rawProgram.split(',').map(Number).reduce((result, current) => {
+      result[softIndex++] = current
+      return result
+    }, {})
+  },
+
   createRegisters() {
     return {
       base: 0,
@@ -133,7 +142,7 @@ module.exports = {
         pos += 2
         return {exitCode: this.exitCodes.OUTPUT, output: a, pos, data}
       } else if (cmd === 99) {
-        return {exitCode: this.exitCodes.TERMINATED}
+        return {exitCode: this.exitCodes.TERMINATED, output, pos, data}
       } else if (cmd === 5) {
         const a = resolveValue(op1, pos + 1)
         const b = resolveValue(op2, pos + 2)
