@@ -16,10 +16,10 @@ const emulator = require('adventofcode-2019-intcode')
 const raw = '................'
 
 // Parse provided program
-const soft = chip.parseProgram(raw)
+const soft = emulator.parseProgram(raw)
 
 // Initialize registers
-const reg = chip.createRegisters()
+const reg = emulator.createRegisters()
 
 // Customizable execution index (optional)
 // If not provided, it will be 0
@@ -45,7 +45,7 @@ Result is an object which may contain following keys:
 
 ## State of emulator
 
-It should be completely operational. Major emulator version matches task number of Advent Of Code 2019. So far at v13.0.0 it seems to be backwards compatible with previous tasks of the same year.
+It should be completely operational. Emulator version corresponds to task number of Advent Of Code 2019. So far at v13.0.0 it seems to be backwards compatible with previous tasks of the same year.
 
 There is no test coverage for now - sry.
 

@@ -1,6 +1,6 @@
 {
-  "name": "adventofcode-2019-intcode",
-  "version": "13.0.0",
+  "name": "advent19-intcode",
+  "version": "13.0.1",
   "description": "Intcode machine defined in adventofcode 2019",
   "main": "index.js",
   "scripts": {
