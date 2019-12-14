@@ -32,7 +32,7 @@ const index = 0
 // additional inputs.
 const inputs = [0, 1, 2]
 
-const result = emulator.run(soft, reg, [], p)
+const result = emulator.run(soft, reg, inputs, p)
 
 // emulator.run also accepts 5th parameter (boolean) which can enable printing every command it executes
 ```
@@ -40,8 +40,11 @@ const result = emulator.run(soft, reg, [], p)
 Result is an object which may contain following keys:
 * exitCode - reason for exiting (one of emulator.exitCodes)
 * pos - current execution index
+* registers - current state of registers
 * data - current state of memory/program
 * output - single output value whenever output command is reached OR array of all output values when program terminates
+
+**Important:** Note that even though emulator returns updated data and registers as a result - it also modifies both by reference. Therefor if you need data and arguments not to be changed - you must clone them. Simplest (yet dirty) way to do it is to JSON serialize and un-serialize :)
 
 ## State of emulator
 

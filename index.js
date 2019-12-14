@@ -128,7 +128,7 @@ module.exports = {
         pos += 4
       } else if (cmd === 3) {
         if (!input.length) {
-          return {exitCode: this.exitCodes.NEED_INPUT, pos, data}
+          return {exitCode: this.exitCodes.NEED_INPUT, pos, registers, data}
         }
   
         const a = input.shift()
@@ -140,9 +140,9 @@ module.exports = {
   
         output.push(a)
         pos += 2
-        return {exitCode: this.exitCodes.OUTPUT, output: a, pos, data}
+        return {exitCode: this.exitCodes.OUTPUT, output: a, pos, registers, data}
       } else if (cmd === 99) {
-        return {exitCode: this.exitCodes.TERMINATED, output, pos, data}
+        return {exitCode: this.exitCodes.TERMINATED, output, pos, registers, data}
       } else if (cmd === 5) {
         const a = resolveValue(op1, pos + 1)
         const b = resolveValue(op2, pos + 2)
