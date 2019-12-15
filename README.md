@@ -48,7 +48,7 @@ Result is an object which may contain following keys:
 
 ## State of emulator
 
-It should be completely operational. Emulator version corresponds to task number of Advent Of Code 2019. So far at v13.0.0 it seems to be backwards compatible with previous tasks of the same year.
+It should be completely operational. Emulator version corresponds to task number of Advent Of Code 2019 and is backwards compatible.
 
 There is no test coverage for now - sry.
 
